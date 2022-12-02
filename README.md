@@ -34,6 +34,10 @@ The preview of the project structure is as follow.
 ```
 
 ## Run the code
+```
+cd GATE
+```
+
 
 main.py is the entry and gate.py is the primary code of the Timeliness.
 
