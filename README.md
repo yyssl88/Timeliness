@@ -36,6 +36,7 @@ The preview of the project structure is as follow.
 ## Run the code
 ```
 cd GATE
+mkdir result
 ```
 
 
@@ -49,4 +50,4 @@ E.g., for Figure 6(a), simply run the following script
 ```
 where gpu_id is the cuda gpu id. Please set it as the empty string "" if the code is executed under the CPU setting.
 
-The "result" folder will be automatically created and experimental results are saved in with different filenames.
+The experimental results are saved in the "result" folder with different filenames.
