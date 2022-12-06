@@ -33,12 +33,12 @@ mkdir results
 
 echo -e "Method GATE"
 
-#for conf in 0.51 0.52 0.53 0.54 0.55 #0.5 0.6 0.65 0.7 0.75 
-#do
-#    resultFile='./result/fig_l_gate_nba_fixedbug_conf='${conf}'.txt'
-#    #> ${resultFile}
-#    python main.py --creator Gate --data ../data/${data[${did}]}'/' --epoch ${epoch} --lr ${lr} --batch_size ${batch_size} --high_conf_sample_ratio ${conf_sample_size} --conf_threshold ${conf} --variant gate --gpuOption ${gpu}  >> ${resultFile} 
-#done
+for conf in 0.51 0.52 0.53 0.54 0.55 #0.5 0.6 0.65 0.7 0.75 
+do
+   resultFile='./result/fig_l_gate_nba_fixedbug_conf='${conf}'.txt'
+   #> ${resultFile}
+   python main.py --creator Gate --data ../data/${data[${did}]}'/' --epoch ${epoch} --lr ${lr} --batch_size ${batch_size} --high_conf_sample_ratio ${conf_sample_size} --conf_threshold ${conf} --variant gate --gpuOption ${gpu}  >> ${resultFile} 
+done
 
 for conf in 0.51 0.52 0.53 0.54 0.55 #0.5 0.6 0.65 0.7 0.75 
 do

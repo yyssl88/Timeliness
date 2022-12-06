@@ -20,6 +20,7 @@ from critic.Valuation import *
 from creator.BERT import get_emb
 from creator.GateDataset import GateValidationTestDataset
 from metrics import metrics, isTrainingKey, FScore
+from utility import procComm_
 from torchmetrics.functional import retrieval_reciprocal_rank, retrieval_normalized_dcg
 
 DELIMITOR = '---'
@@ -198,7 +199,12 @@ class Gate:
             self.training['training_embedded'][i][1] = torch.nan_to_num(self.training['training_embedded'][i][1])
             self.training['training_embedded'][i][2] = torch.nan_to_num(self.training['training_embedded'][i][2])
 
-        data = pd.read_csv(self.args.data + 'data.csv')
+        # data = pd.read_csv(self.args.data + 'data.csv')
+        # specially handle comm_
+        if self.args.data.find('comm_') != -1 or self.args.data.find('comm') != -1:
+            data = procComm_(self.args.data + 'data.csv')
+        else:
+            data = pd.read_csv(self.args.data + 'data.csv')
 
         self.training['data_attribute_embeddings'] = attribute_embeddings
         self.training['data_sentence_embeddings'] = sentence_embeddings
@@ -347,6 +353,7 @@ class Gate:
                     # filter rules that already exists in the training instances
                     if line.find('data.t0.id') != -1 and line.find('data.t1.id') != -1:
                         continue
+                    print('read ...')
                     rulesStr.append(line.strip())
             ccs = CCs(rulesStr, self.timelinessAttrs)
         except:

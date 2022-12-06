@@ -22,16 +22,16 @@ conf_threshold=0.55
 echo -e "GATE"
 mkdir results
 
-# echo -e "Method GATE"
-# resultFile='./result/fig_a_gate.txt'
-# > ${resultFile}
-# python main.py --creator Gate --data ../data/${data[${did}]}'/' --epoch ${epoch} --lr ${lr} --batch_size ${batch_size} --high_conf_sample_ratio ${conf_sample_size} --conf_threshold ${conf_threshold} --variant gate --gpuOption ${gpu} >> ${resultFile} 
+echo -e "Method GATE"
+resultFile='./result/fig_a_gate.txt'
+> ${resultFile}
+python main.py --creator Gate --data ../data/${data[${did}]}'/' --epoch ${epoch} --lr ${lr} --batch_size ${batch_size} --high_conf_sample_ratio ${conf_sample_size} --conf_threshold ${conf_threshold} --variant gate --gpuOption ${gpu} >> ${resultFile} 
 
 
-# echo -e "Method Creator"
-# resultFile='./result/fig_a_creator.txt'
-# > ${resultFile}
-# python main.py --creator Gate --data ../data/${data[${did}]}'/' --epoch ${epoch} --lr ${lr} --batch_size ${batch_size} --high_conf_sample_ratio ${conf_sample_size} --conf_threshold ${conf_threshold} --variant creator --gpuOption ${gpu} >> ${resultFile} 
+echo -e "Method Creator"
+resultFile='./result/fig_a_creator.txt'
+> ${resultFile}
+python main.py --creator Gate --data ../data/${data[${did}]}'/' --epoch ${epoch} --lr ${lr} --batch_size ${batch_size} --high_conf_sample_ratio ${conf_sample_size} --conf_threshold ${conf_threshold} --variant creator --gpuOption ${gpu} >> ${resultFile} 
 
 
 echo -e "Method Critic"

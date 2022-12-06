@@ -34,12 +34,12 @@ mkdir results
 
 echo -e "Method GATE"
 
-#for ratio in 0.2 0.4 0.6 0.8
-#do
-#    resultFile='./result/fig_j_gate_fix_bug_'${data[${did}]}'_ratio'${ratio}'.txt'
-#    > ${resultFile}
-#    python main.py --creator Gate --data ../data/${data[${did}]}'/' --epoch ${epoch} --lr ${lr} --batch_size ${batch_size} --high_conf_sample_ratio ${conf_sample_size} --conf_threshold ${conf_threshold} --variant gate --gpuOption ${gpu} --maxMLData 1000 --entityRatio ${ratio} >> ${resultFile} 
-#done
+for ratio in 0.2 0.4 0.6 0.8
+do
+   resultFile='./result/fig_j_gate_fix_bug_'${data[${did}]}'_ratio'${ratio}'.txt'
+   > ${resultFile}
+   python main.py --creator Gate --data ../data/${data[${did}]}'/' --epoch ${epoch} --lr ${lr} --batch_size ${batch_size} --high_conf_sample_ratio ${conf_sample_size} --conf_threshold ${conf_threshold} --variant gate --gpuOption ${gpu} --maxMLData 1000 --entityRatio ${ratio} >> ${resultFile} 
+done
 
 for ratio in 0.2 0.4 0.6 0.8
 do
