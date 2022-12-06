@@ -43,7 +43,7 @@ Here the arguments are described as follow
 - **data_path** is the path of the original data (*.csv file)
 - **lr** is the learning rate
 - **batch_size** is the batch size
-- **conf_sample_size** is the sample ratio of temporal orders to be predict by the Creator
+- **conf_sample_size** is the sample ratio of temporal orders to be predicted by the Creator
 - **conf_threshold** is the threshold of confidence
 - **variant** is the variant option: gate, creator, critic, creatornc, creatorne, creatorna, gatenc and creatoritr
 - **gpu** is the gpu cuda option
