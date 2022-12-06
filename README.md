@@ -65,6 +65,6 @@ E.g., for Figure 6(a), simply run the following script
 ```
 ./fig_a.sh ${gpu_id}
 ```
-where gpu_id is the cuda gpu id. Please set it as the empty string "" if the code is executed under the CPU setting.
+where gpu_id is the cuda gpu id. 
 
 The experimental results are saved in the "result" folder with different filenames.
