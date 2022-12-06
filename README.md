@@ -46,6 +46,7 @@ Here the arguments are described as follow
 - **conf_sample_size** is the sample ratio to select temporal orders to be predicted
 - **conf_threshold** is the threshold of confidence
 - **variant** is the variant option: gate, creator, critic, creatornc, creatorne, creatorna, gatenc and creatoritr
+- **gpu** is the gpu cuda option
 
 
 ## Run the settings
