@@ -36,6 +36,21 @@ The preview of the project structure is as follow.
 ## Run the code
 ```
 cd GATE
+python main.py --creator Gate --data ${data_path} --lr ${lr} --batch_size ${batch_size} --high_conf_sample_ratio ${conf_sample_size} --conf_threshold ${conf_threshold} --variant gate --gpuOption ${gpu}
+```
+Here the arguments are described as follow
+
+- **data_path** is the path of the original data (*.csv file)
+- **lr** is the learning rate
+- **batch_size** is the batch size
+- **conf_sample_size** is the sample ratio to select temporal orders to be predicted
+- **conf_threshold** is the threshold of confidence
+- **variant** is the variant option: gate, creator, critic, creatornc, creatorne, creatorna, gatenc and creatoritr
+
+
+## Run the settings
+```
+cd GATE
 mkdir result
 ```
 
