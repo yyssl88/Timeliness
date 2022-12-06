@@ -7,6 +7,8 @@ Please download the zip file from the following link and decompress it in the ro
 
 https://drive.google.com/drive/folders/1B7z0FFOSFfqOvgP3r78exvYZey9G1RZW?usp=share_link
 
+(Other link: https://www.aliyundrive.com/s/xL9BTVTcaWi )
+
 The preview of the project structure is as follow.
 
 ```
