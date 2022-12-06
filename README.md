@@ -22,6 +22,7 @@ The preview of the project structure is as follow.
     ├── critic
     ├── discovery
     ├── gate.py
+    ├── utility.py
     ├── gate.sh
     ├── main.py
     ├── metrics.py
