@@ -13,7 +13,7 @@ gpu=$1
 cd ../
 
 echo -e 'dataset : '${data[${did}]}
-epoch=10
+epoch=30
 lr=0.0001
 batch_size=512
 conf_sample_size=0.2
